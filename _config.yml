@@ -16,10 +16,10 @@ timezone: Europe/Berlin
 
 title: Zin's Pentest-Blog  # the main title
 
-tagline: Writeups n' technique's # it will display as the subtitle
+tagline: Writeups and technique's | Way of the Sword. # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  Pentesting writeups, CPTs, and security notes.
+  Pentesting writeups, CTFs, and security notes.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
