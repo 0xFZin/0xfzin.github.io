@@ -1,0 +1,29 @@
+---
+layout: page
+---
+
+{% if page.image %}
+  {% assign src = page.image.path | default: page.image %}
+  {% unless src contains '//' %}
+    {% assign base = page.media_subpath | replace: ':certificate', page.certificate %}
+    {% assign src = base | append: '/' | append: src | replace: '//', '/' | relative_url %}
+  {% endunless %}
+  <div role="img"
+       aria-label="{{ page.image.alt | default: page.title | xml_escape }}"
+       style="background: url('{{ src }}') center / cover;
+              aspect-ratio: 40 / 21;
+              border-radius: .625rem;
+              margin-bottom: 1.5rem;"></div>
+{% endif %}
+
+{{ content }}
+
+{% assign entries = site.posts | where: 'certificate', page.certificate | sort: 'date' %}
+<ul>
+  {% for e in entries %}
+    <li>
+      <a href="{{ e.url | relative_url }}">{{ e.title }}</a>
+      <small class="text-muted">{{ e.date | date: '%Y-%m-%d' }}</small>
+    </li>
+  {% endfor %}
+</ul>
