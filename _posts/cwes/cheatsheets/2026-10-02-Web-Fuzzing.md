@@ -157,6 +157,42 @@ Recursive brutforce, good for reappending found dirs into List.
 feroxbuster -u http://TARGET -w wordlist.txt
 ```
 
+Set request `timeout`
+
+```bash
+feroxbuster -u http://TARGET -w wordlist.txt --timeout s
+```
+
+Don't verify TLS `certificates`
+
+```bash
+feroxbuster -u https://TARGET -w wordlist.txt -k
+```
+
+Exclude status codes
+
+```bash
+feroxbuster -u http://TARGET -w wordlist.txt -C status_code
+```
+
+Filter by response `size`
+
+```bash
+feroxbuster -u http://TARGET -w wordlist.txt -S size
+```
+
+Filter by line count
+
+```bash
+feroxbuster -u http://TARGET -w wordlist.txt -N lines
+```
+
+Filter by word count 
+
+```bash
+feroxbuster -u http://TARGET -w wordlist.txt -W words_in_resp
+```
+
 
 
 **Wenum/WFuzz (ffuf does the same)**
