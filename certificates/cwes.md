@@ -6,6 +6,8 @@ order: 1
 permalink: /certificates/cwes
 image:
   path: badge.png
+certificate: cwes
+media_subpath: /assets/img/cwes
 ---
 ### CWES (Certified Web Exploitation Specialist)
 The CWES Certificate is a HackTheBox certification focused on web application penetration testing and exploitation.

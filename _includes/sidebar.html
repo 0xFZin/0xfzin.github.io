@@ -43,7 +43,7 @@
                   <a href="{{ tab.url | relative_url }}" class="nav-link"><span>ALL</span></a>
                 </li>
                 {% for p in cert_pages %}
-                  <li class="nav-item{% if page.cert == p.cert %} active{% endif %}">
+                  <li class="nav-item{% if page.certificate == p.certificate %} active{% endif %}">
                     <a href="{{ p.url | relative_url }}" class="nav-link">
                       <i class="fa-fw {{ p.icon }}"></i>
                       <span>{{ p.title | upcase }}</span>

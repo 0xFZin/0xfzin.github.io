@@ -18,12 +18,14 @@ layout: page
 
 {{ content }}
 
-{% assign entries = site.posts | where: 'certificate', page.certificate | sort: 'date' %}
-<ul>
-  {% for e in entries %}
-    <li>
-      <a href="{{ e.url | relative_url }}">{{ e.title }}</a>
-      <small class="text-muted">{{ e.date | date: '%Y-%m-%d' }}</small>
-    </li>
-  {% endfor %}
-</ul>
+{% if page.certificate %}
+  {% assign entries = site.posts | where: 'certificate', page.certificate | sort: 'date' %}
+  <ul>
+    {% for e in entries %}
+      <li>
+        <a href="{{ e.url | relative_url }}">{{ e.title }}</a>
+        <small class="text-muted">{{ e.date | date: '%Y-%m-%d' }}</small>
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
